@@ -2,31 +2,6 @@ const wrapper = document.querySelector('.sidebar');
 const btns = document.querySelectorAll('button');
 const ahrev = document.querySelector('a');
 const kvd = document.querySelectorAll('.kvadr')
-function hideContent(){
-    kvd.forEach(function(item){
-        item.style.display = 'none'
-    })
-    btns.forEach(function(item){
-        item.classList.remove('sty')
-    })
-}
-function showContent(i=0){
-    kvd[i].style.display = 'block';
-    btns[i].classList.add('sty')
-}
-hideContent()
-showContent()
-wrapper.addEventListener('click',function(event){
-    const a = event.target;
-    if(a && a.classList.contains('btn')){
-        btns.forEach(function(item,i){
-            if(item == a){
-                hideContent()
-                showContent(i)
-            }
-        })
-    }
-})
 
 // console.log(wrapper)/////Обертка кнопок
 // wrapper.addEventListener('click', function(event){
